@@ -22,12 +22,11 @@ Answer:
 QA_CHAIN_PROMPT = PromptTemplate.from_template(pre_prompt)
 
 # Streamlit UI
-st.title("QA Chat Interface")
+st.title("Simple QA Interface for DeepSeek")
 st.write("Enter context and a prompt to receive a thought and response.")
-
 # User inputs
-context = st.text_area("Context", "NA")
-prompt = st.text_input("Prompt", "What is the capital of France?")
+context = st.text_area("Context", "Baby don't hurt me.", height=100)
+prompt = st.text_area("Prompt", "What is love?", height=None)
 
 if st.button("Submit"):
     # Generate response

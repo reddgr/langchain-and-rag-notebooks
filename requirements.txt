@@ -1,6 +1,7 @@
 streamlit
 langchain-community
 langchain-experimental
+langchain-ollama
 faiss-cpu
 pdfplumber
 huggingface-hub
