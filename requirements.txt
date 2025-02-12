@@ -1,0 +1,7 @@
+streamlit
+langchain-community
+langchain-experimental
+faiss-cpu
+pdfplumber
+huggingface-hub
+ollama
