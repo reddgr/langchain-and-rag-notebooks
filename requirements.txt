@@ -2,7 +2,9 @@ streamlit
 langchain-community
 langchain-experimental
 langchain-ollama
+langchain-huggingface
 faiss-cpu
 pdfplumber
 huggingface-hub
 ollama
+sentence-transformers

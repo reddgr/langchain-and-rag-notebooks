@@ -1,13 +1,15 @@
 import streamlit as st
 from langchain_community.document_loaders import PDFPlumberLoader
 from langchain_experimental.text_splitter import SemanticChunker
-from langchain_community.embeddings import HuggingFaceEmbeddings
+# from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_community.llms import Ollama
 from langchain.prompts import PromptTemplate
 from langchain.chains.llm import LLMChain
 from langchain.chains.combine_documents.stuff import StuffDocumentsChain
 from langchain.chains import RetrievalQA
+from langchain_ollama import OllamaLLM
 
 # color palette
 primary_color = "#1E90FF"
@@ -74,7 +76,7 @@ if uploaded_file is not None:
     retriever = vector.as_retriever(search_type="similarity", search_kwargs={"k": 3})
 
     # Define llm
-    llm = Ollama(model="deepseek-r1")
+    llm = OllamaLLM(model="deepseek-r1:1.5b")
 
     # Define the prompt
     prompt = """
