@@ -8,6 +8,7 @@ __pycache__/
 
 # Git clones
 pinecone_datasets_reddgr/
+pinecone_datasets*
 
 # DATA
 *.pdf
